@@ -30,12 +30,12 @@ jobs:
 
     - name: Mend CLI Scan
       env:
-        #MEND_EMAIL: ${{secrets.MEND_EMAIL}}
-        #MEND_USER_KEY: ${{secrets.MEND_USER_KEY}}
-        #MEND_URL: https://saas.mend.io
-        MEND_EMAIL: tamir.dahan@ness-tech.co.il
-        MEND_USER_KEY: 90700aa7df0e4e8f9fbd550e358e90868c895149e82b4198b090e94e9c99669b
-        MEND_URL: https://saas-eu.mend.io/
+        MEND_EMAIL: ${{secrets.MEND_EMAIL}}
+        MEND_USER_KEY: ${{secrets.MEND_USER_KEY}}
+        MEND_URL: https://saas.mend.io
+        #MEND_EMAIL: tamir.dahan@ness-tech.co.il
+        #MEND_USER_KEY: 90700aa7df0e4e8f9fbd550e358e90868c895149e82b4198b090e94e9c99669b
+        #MEND_URL: https://saas-eu.mend.io/
         
       run: |
         echo Downloading Mend CLI
