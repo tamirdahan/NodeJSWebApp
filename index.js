@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+var cookieParser = require('cookie-parser')
+app.use(cookieParser())
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
