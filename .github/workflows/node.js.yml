@@ -28,5 +28,21 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Start server
-      run: npm start
+    - name: Mend CLI Scan
+      env:
+        #MEND_EMAIL: ${{secrets.MEND_EMAIL}}
+        #MEND_USER_KEY: ${{secrets.MEND_USER_KEY}}
+        #MEND_URL: https://saas.mend.io
+        MEND_EMAIL: tamir.dahan@ness-teh.co.il
+        MEND_USER_KEY: 90700aa7df0e4e8f9fbd550e358e90868c895149e82b4198b090e94e9c99669b
+        MEND_URL: https://saas-eu.mend.io/
+        
+      run: |
+        echo Downloading Mend CLI
+        curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
+        echo run Mend dependencies scan
+        mend dep -u
+        echo Run Mend code scan
+
+#    - name: Start server
+#      run: npm start
