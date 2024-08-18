@@ -5,8 +5,8 @@ const app = express();
 const port = 3000;
 
 // Body-parser middleware
-app.use(bodyparser.urlencoded({ extended: true }))
-app.use(bodyparser.json())
+// app.use(bodyparser.urlencoded({ extended: true }))
+// app.use(bodyparser.json())
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
