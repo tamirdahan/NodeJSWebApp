@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "NodeJSWebApp",
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"No tests available\"",
