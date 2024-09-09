@@ -43,7 +43,7 @@ jobs:
         #echo "Repository Name: ${GITHUB_REPOSITORY##*/}"
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
         echo run Mend dependencies scan
-        mend dep --update --scope "GitHub//${GITHUB_REPOSITORY##*/}"  --reachability
+        mend dep --update --scope "GitHub//${GITHUB_REPOSITORY##*/}" # --reachability
         echo Run Mend code scan
 
 #    - name: Start server
