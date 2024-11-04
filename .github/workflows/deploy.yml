@@ -33,9 +33,9 @@ jobs:
         #MEND_EMAIL: ${{secrets.MEND_EMAIL}}
         #MEND_USER_KEY: ${{secrets.MEND_USER_KEY}}
         #MEND_URL: https://saas.mend.io
-        MEND_EMAIL: tamir.dahan@ness-tech.co.il
-        MEND_USER_KEY: 90700aa7df0e4e8f9fbd550e358e90868c895149e82b4198b090e94e9c99669b
-        MEND_URL: https://saas-eu.mend.io/
+        MEND_EMAIL: mendscanner@ness.com
+        MEND_USER_KEY: 1578756296eb460f8ea78f775aa1c66980a4c6e981ed406691881efe16df938a
+        MEND_URL: https://saas-il.mend.io/
         
       run: |
         echo Downloading Mend CLI
