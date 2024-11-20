@@ -45,16 +45,6 @@ jobs:
         echo run Mend dependencies scan
         mend dep --update --scope "GitHub Repository//${GITHUB_REPOSITORY##*/}"  --reachability --fail-policy
 
-        # Check the exit code and take action if it's 9
-        if [ $? -e 9 ]; then
-          echo "Dependencies scan found policy violation"
-          # Add error handling logic here
-          exit 1  # Terminate the pipeline process
-        fi
-
-# The process continues if no policy violation was detected
-echo "Pipeline process continues..."
-
 
 #    - name: Start server
 #      run: npm start
