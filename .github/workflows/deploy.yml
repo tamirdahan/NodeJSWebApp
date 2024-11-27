@@ -36,8 +36,7 @@ jobs:
         MEND_EMAIL: mendscanner@ness.com
         MEND_USER_KEY: 1578756296eb460f8ea78f775aa1c66980a4c6e981ed406691881efe16df938a
         MEND_URL: https://saas-il.mend.io/
-        
-        
+            
       run: |
         echo Downloading Mend CLI
         #echo "Repository Name: ${{ github.repository }}"
@@ -45,28 +44,7 @@ jobs:
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
         echo run Mend dependencies scan
         mend dep --update --scope "GitHub Repository//${GITHUB_REPOSITORY##*/}"  --reachability 
-
-    name: send_email:
-     runs-on: ubuntu-latest
-
-     steps:
-      # Step 1: Checkout the repository (optional, depending on your workflow)
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # Step 2: Send an email
-      - name: Send Email
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com          # SMTP server
-          server_port: 465                        # SMTP port (SSL)
-          username: dhnt6847@gmail.com  # Email username (store as secret)
-          password: tamirdahan # Email password (store as secret)
-          subject: "GitHub Actions Email"
-          body: "This is a test email sent by GitHub Actions."
-          to: "tamir.dahan@ness-tech.co.il"             # Recipient email
-          from: "tamir.dahan@ness-tech.co.il"              # Sender email
-
+  
 
 #    - name: Start server
 #      run: npm start
