@@ -45,7 +45,6 @@ jobs:
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
         echo run Mend dependencies scan
         mend dep --update --scope "GitHub Repository//${GITHUB_REPOSITORY##*/}"  --reachability 
-        continueOnError: true
 
     name: send_email:
      runs-on: ubuntu-latest
