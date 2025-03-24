@@ -34,7 +34,7 @@ jobs:
         #MEND_USER_KEY: ${{secrets.MEND_USER_KEY}}
         #MEND_URL: https://saas.mend.io
         MEND_EMAIL: mendscanner@ness.com
-        MEND_USER_KEY: 1578756296eb460f8ea78f775aa1c66980a4c6e981ed406691881efe16df938a
+        MEND_USER_KEY: cfe52c37785b426a864b6924f0e70162ba3398c7a6f34c688ad729e49a93bf1a
         MEND_URL: https://saas-il.mend.io/
             
       run: |
